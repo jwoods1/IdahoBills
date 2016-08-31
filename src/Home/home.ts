@@ -14,7 +14,7 @@ postComment(bill, comment){
 }
 
 getBills(){
-this.http.get('http://openstates.org/api/v1/bills/?state=id&apikey=bcc2a830883c4f459dbffe94b2a3e90f')
+this.http.get('https://openstates.org/api/v1/bills/?state=id&apikey=bcc2a830883c4f459dbffe94b2a3e90f')
   .then(data => {
     this.bills = JSON.parse(data.response);
     this.bills.forEach(i => {
