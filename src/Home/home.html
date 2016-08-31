@@ -1,11 +1,10 @@
 <template>
     <div class="row">
-        <div if.bind="!loaded" style="text-align:center; font-size:50px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></div>
+        loading
         <div if.bind="loaded" class="col-md-4 panel" style="height:300px;" repeat.for="bill of bills">
             <div class="col-md-12">${bill.id}</div>
             <div class="col-md-12">${bill.title}</div>
             <div class="col-md-12">${bill.updated_at}</div>
-
             <input type="text-area" value.bind="bill.comment" />
             <button click.delegate="postComment(bill, bill.comment)">Click Me</button>
             <ul>
